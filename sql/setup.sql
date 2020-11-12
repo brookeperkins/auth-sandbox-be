@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  email TEXT UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL,
+  user_name TEXT,
+  user_photo TEXT,
+  user_bio VARCHAR(250)
+)
